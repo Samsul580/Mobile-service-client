@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
+import ProcessPayment from './ProcessPayment/ProcessPayment';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Order = () => {
@@ -19,8 +20,8 @@ const Order = () => {
             .then(result => setOrder(result[0]))
     }, [])
 
-    const handleOrder = () => {
-        const newOrder = {...userInfo, ...newOrderInfo};
+    const handleOrder = (id) => {
+        const newOrder = {...userInfo, ...newOrderInfo, id};
         fetch('http://localhost:5055/addOrder', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -38,13 +39,14 @@ const Order = () => {
                     <div className="col-md-2">
                         <Sidebar></Sidebar>
                     </div>
-                    <div className="col-md-8">
-                        <h1>Add Order</h1>
-                        <h3>name: {displayName}</h3>
-                        <h3>name: {email}</h3>
-                        <h3>name: {name}</h3>
-                        <h3>price: {price}</h3>
-                        <button className="btn btn-primary" onClick={handleOrder}>Order</button>
+                    <div className="col-md-8 m-5">
+                        <h1 className="mb-3">Process Order</h1>
+                        <h5>Name: {displayName}</h5>
+                        <h5>Email: {email}</h5>
+                        <h5>Service Name: {name}</h5>
+                        <h5>price: {price}</h5>
+                        <h3>Payment option given below</h3>
+                        <ProcessPayment handleOrder={handleOrder}></ProcessPayment>
                     </div>
                 </div>
             </div>
