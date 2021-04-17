@@ -1,0 +1,16 @@
+.skill {
+    padding: 100px;
+    text-align: center;
+}
+.skill-area {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-column-gap: 50px;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .skill-area {
+        display: block;
+        margin: 20px
+    }
+  }

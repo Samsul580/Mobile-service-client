@@ -1,0 +1,18 @@
+.portfolio {
+    padding: 100px;
+    text-align: center;
+    background-color: #ffdd99;
+}
+.portfolio-area {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .portfolio-area {
+        display: block;
+        margin: 20px
+    }
+  }

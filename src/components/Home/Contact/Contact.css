@@ -1,0 +1,44 @@
+.contact {
+    padding: 100px;
+    background-color: #3c5499;
+    text-align: center;
+    color: #fff;
+}
+.input {
+    width: 70%;
+    margin: auto;
+}
+.input form input[type="text"] {
+    width: 48%;
+    display: inline-block;
+    border: 1px solid #3c5499;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #fff;
+    background-color: #273a71;
+    border-radius: 5px;
+}
+.input form input:nth-child(2) {
+    float: right;
+}
+.input textarea {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #3c5499;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #fff;
+    background-color: #273a71;
+    border-radius: 5px;
+    min-height: 150px;
+}
+.submit {
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .input form input[type="text"] {
+        display: block;
+        width: 100%;
+    }
+  }

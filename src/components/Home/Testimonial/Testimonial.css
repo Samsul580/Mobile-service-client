@@ -1,0 +1,18 @@
+.testimonial {
+    padding: 100px;
+    background-color: #d74680;
+    color: #fff;
+}
+.testimonial-area {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+.testimonial-area p {
+    font-style: italic;
+}
+.testimonial-area h5 {
+    color: #ffdd99;
+}
+

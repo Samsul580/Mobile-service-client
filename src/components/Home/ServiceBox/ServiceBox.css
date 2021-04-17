@@ -1,0 +1,13 @@
+.service-box {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.service-box:hover {
+    background-color: #07866f;
+    transition: 1s;
+}
+.service-box a {
+    color:#fff;
+    text-decoration: none;
+}

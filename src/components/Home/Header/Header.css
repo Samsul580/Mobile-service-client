@@ -1,0 +1,9 @@
+.header-container {
+    background-image: url('../../../images/welcomeBg.jpg');
+    background-size: cover;
+}
+.blur {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}

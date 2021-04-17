@@ -1,0 +1,23 @@
+.team {
+    background-color: #e7f1f8;
+    padding: 100px;
+    text-align: center;
+}
+.team-area {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-column-gap: 50px;
+    text-align: center;
+}
+.team-area img {
+    border-radius: 50%;
+}
+.team-area h5 {
+    color: #30bae7;
+}
+@media only screen and (max-width: 600px) {
+    .team-area {
+        display: block;
+        margin: 20px
+    }
+  }
