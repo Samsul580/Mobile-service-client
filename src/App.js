@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import Review from './components/Dashboard/Review/Review';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Order from './components/Dashboard/Order/Order';
+import BookingList from './components/Dashboard/OrderList/BookingList';
 
 export const UserContext = createContext();
 
@@ -37,9 +38,12 @@ function App() {
                     <PrivateRoute path="/review">
                         <Review></Review>
                     </PrivateRoute>
-                    <Route path="/order/:id">
+                    <PrivateRoute path="/bookingList">
+                        <BookingList></BookingList>
+                    </PrivateRoute>
+                    <PrivateRoute path="/order/:id">
                         <Order></Order>
-                    </Route>
+                    </PrivateRoute>
                     <Route path="/login">
                         <Login></Login>
                     </Route>

@@ -26,14 +26,20 @@ const Sidebar = () => {
                          <span>Manage services</span>
                     </Link>
                 </li>
-                <li>
-                    <Link to="/review" className="text-white">
-                         <span>Add review</span>
-                    </Link>
-                </li>
+                
                 <li>
                     <Link to="/order/:id" className="text-white">
                          <span>Order</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/bookingList" className="text-white">
+                         <span>Booking List</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/review" className="text-white">
+                         <span>Add review</span>
                     </Link>
                 </li>
             </ul>
