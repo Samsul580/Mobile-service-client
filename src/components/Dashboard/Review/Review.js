@@ -9,15 +9,16 @@ const Review = () => {
         setInfo(newInfo);
     }
     console.log(info);
-    const handleSubmit = () => {
-        const reviewInfo = {...info};
-        fetch('http://localhost:5055/addReview', {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const reviewInfo = { ...info };
+        fetch('https://agile-woodland-49427.herokuapp.com/addReview', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(reviewInfo)
         })
-        .then(response => response.json())
-        .then(data => console.log(data))
+            .then(response => response.json())
+            .then(data => console.log(data))
         console.log(reviewInfo);
     }
     return (
@@ -42,7 +43,7 @@ const Review = () => {
                                 <label htmlFor="description" className="form-label">Description</label>
                                 <input onBlur={handleBlur} name="description" type="text" className="form-control" id="description" />
                             </div>
-                            
+
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </form>
                     </div>

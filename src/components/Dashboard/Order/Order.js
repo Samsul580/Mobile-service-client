@@ -13,7 +13,7 @@ const Order = () => {
     const {name, price} = order;
     const newOrderInfo = {name, price};
     useEffect(() => {
-        fetch(`http://localhost:5055/product/${id}`, {
+        fetch(`https://agile-woodland-49427.herokuapp.com/product/${id}`, {
             method: 'POST'
         })
             .then(response => response.json())
@@ -22,7 +22,7 @@ const Order = () => {
 
     const handleOrder = (id) => {
         const newOrder = {...userInfo, ...newOrderInfo, id};
-        fetch('http://localhost:5055/addOrder', {
+        fetch('https://agile-woodland-49427.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newOrder)

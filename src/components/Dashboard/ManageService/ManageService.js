@@ -4,12 +4,12 @@ import Sidebar from '../Sidebar/Sidebar';
 const ManageService = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5055/service')
+        fetch('https://agile-woodland-49427.herokuapp.com/service')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])
     const deleteService = (id) => {
-        fetch(`http://localhost:5055/delete/${id}`, {
+        fetch(`https://agile-woodland-49427.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())

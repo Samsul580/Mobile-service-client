@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const BookingList = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5055/orders')
+        fetch('https://agile-woodland-49427.herokuapp.com/orders')
             .then(response => response.json())
             .then(data => setOrders(data))
     }, [])
@@ -23,6 +23,7 @@ const BookingList = () => {
                                     <th scope="col">Name</th>
                                     <th scope="col">Email Id</th>
                                     <th scope="col">Service</th>
+                                    <th scope="col">Payment amount</th>
                                     <th scope="col">Payment Id</th>
                                 </tr>
                             </thead>
@@ -33,6 +34,7 @@ const BookingList = () => {
                                             <td>{order.displayName}</td>
                                             <td>{order.email} {order.brand}</td>
                                             <td>{order.name}</td>
+                                            <td>${order.price}</td>
                                             <td>{order.id}</td>
                                         </tr>
                                     </tbody>

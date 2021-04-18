@@ -13,13 +13,14 @@ const AddService = () => {
         const newFile = e.target.files[0];
         setFile(newFile);
     }
-    const handleSubmit = () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
         const formData = new FormData()
         formData.append('file', file);
         formData.append('name', info.name);
         formData.append('price', info.price);
 
-        fetch('http://localhost:5055/addService', {
+        fetch('https://agile-woodland-49427.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })
