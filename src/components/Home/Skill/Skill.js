@@ -17,15 +17,15 @@ const Skill = () => {
                 </div>
                 <div>
                     <img src={skill2} alt="" />
-                    <h3>iPhone service</h3>
+                    <h3>Chinese phone service</h3>
                 </div>
                 <div>
                     <img src={skill3} alt="" />
-                    <h3>iPhone service</h3>
+                    <h3>Sony service</h3>
                 </div>
                 <div>
                     <img src={skill4} alt="" />
-                    <h3>iPhone service</h3>
+                    <h3>Overall service</h3>
                 </div>
             </div>
         </div>

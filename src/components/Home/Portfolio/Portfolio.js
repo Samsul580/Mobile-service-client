@@ -9,23 +9,23 @@ const Portfolio = () => {
     return (
         <div className="portfolio">
             <h1>OUR PORTFOLIO</h1>
-            <p className="w-50 mx-auto my-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam</p>
+            <p className="w-50 mx-auto my-4">We solve many big projects in the world. Our compay is internation compay. We have many international projects.</p>
             <div className="container portfolio-area">
                 <div>
                     <img className="w-75" src={portfolio1} alt=""/>
-                    <h2>ISOMETRIC PERSPECTIVE MOCK-UP</h2>
+                    <h2>Project with iPhoene company</h2>
                 </div>
                 <div>
                     <img className="w-75" src={portfolio2} alt=""/>
-                    <h2>ISOMETRIC PERSPECTIVE MOCK-UP</h2>
+                    <h2>Project with Realme company</h2>
                 </div>
                 <div>
                     <img className="w-75" src={portfolio3} alt=""/>
-                    <h2>ISOMETRIC PERSPECTIVE MOCK-UP</h2>
+                    <h2>Project with samsung company</h2>
                 </div>
                 <div>
                     <img className="w-75" src={portfolio4} alt=""/>
-                    <h2>ISOMETRIC PERSPECTIVE MOCK-UP</h2>
+                    <h2>Big project in our company</h2>
                 </div>
             </div>
             <button className="btn btn-secondary m-3 p-3">LOAD MORE PROJECTS</button>
